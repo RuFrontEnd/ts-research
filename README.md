@@ -1,2 +1,2 @@
 # ts-research
-ts-research
+Typescript research
