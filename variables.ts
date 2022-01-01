@@ -12,6 +12,7 @@ let speed: string = "fast";
 // boolean
 let hasName: boolean = true;
 
+export {}
 // null
 let nothingMuch: null = null;
 
@@ -19,7 +20,7 @@ let nothingMuch: null = null;
 let nothing: undefined = undefined;
 
 // object types
-// built in obj
+// built in object
 let now: Date = new Date();
 
 // array
