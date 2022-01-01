@@ -7,7 +7,7 @@ export {};
 class Vehicle {
   public color: string;
 
-  constructor(color) {
+  constructor(color: string) {
     this.color = color;
   } // constructor 接受參數來定義一個實例的屬性
 
@@ -15,15 +15,15 @@ class Vehicle {
     console.log("beep");
   }
 }
-
-const vehicle = new Vehicle(123);
+const vehicle = new Vehicle("red");
+// const vehicle = new Vehicle(123); // err
 // vehicle.honk() // err
 console.log(vehicle.color);
 
 class Car extends Vehicle {
   public wheels: number;
 
-  constructor(wheels, color: string) {
+  constructor(wheels: number, color: string) {
     super(color);
     this.wheels = wheels;
     this.color = color;
