@@ -120,6 +120,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"src/index.ts":[function(require,module,exports) {
 "use strict"; // yarn add parcel-bundler -g => 偵測到<script src="./[fileName].ts"></script> 則自動編譯 .ts => .js 套件
 // 啟動 parcel => yarn parcel ./basic/maps/index.html
+
+console.log("ttt");
 },{}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
