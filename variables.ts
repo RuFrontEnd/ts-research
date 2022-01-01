@@ -51,7 +51,7 @@ logNumber(1);
 // logNumber('test') // err
 
 // type annotations => 清楚定義變數型別
-// type inference => 讓 ts 判斷可能的型別( 無法判斷時為 any )
+// type inference (型別推論) => 讓 ts 判斷可能的型別( 無法判斷時為 any )
 // when to use annotations
 // 1) function that return the 'any' type
 const json = '{"x": 10, "y": 20}';
