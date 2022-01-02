@@ -27,7 +27,7 @@ let nullNumber: string | number | boolean = null;
 let favoriteNumber: any = "seven";
 favoriteNumber = 7; // no err
 
-// 未被主動賦予型別者 => ts 自動推斷為 any
+// 未被主動賦予型別與值者 => ts 自動推斷為 any
 let anyType; // 自動判斷型別為 any
 
 // object types
@@ -51,6 +51,12 @@ class Car {
 let car: Car = new Car(1);
 
 // console.log("car", car);
+
+// 聯合型別
+let unionTypeVariable: string | number;
+unionTypeVariable = 1; // no err
+unionTypeVariable = "1"; // no err
+// unionTypeVariable = true; // err
 
 // Object literal
 let point: { x: number; y: number } = {
