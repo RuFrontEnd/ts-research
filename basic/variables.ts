@@ -1,3 +1,4 @@
+export {};
 // primitive types
 // number
 let apples: number = 5; // type annotations
@@ -12,12 +13,22 @@ let speed: string = "fast";
 // boolean
 let hasName: boolean = true;
 
-export {}
 // null
 let nothingMuch: null = null;
 
 // undefined
 let nothing: undefined = undefined;
+
+// undefined 和 null 是所有型別的子型別
+let undefinedNumber: string | number | boolean = undefined;
+let nullNumber: string | number | boolean = null;
+
+// any
+let favoriteNumber: any = "seven";
+favoriteNumber = 7; // no err
+
+// 未被主動賦予型別者 => ts 自動推斷為 any
+let anyType; // 自動判斷型別為 any
 
 // object types
 // built in object
@@ -30,8 +41,16 @@ let myNumbers: number[] = [1, 2, 3];
 let truths: boolean[] = [true, true, false];
 
 // Classes
-class Car {}
-let car: Car = new Car();
+class Car {
+  count: number;
+
+  constructor(count: number) {
+    this.count = count;
+  }
+}
+let car: Car = new Car(1);
+
+// console.log("car", car);
 
 // Object literal
 let point: { x: number; y: number } = {

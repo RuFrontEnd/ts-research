@@ -2,18 +2,11 @@
 // 啟動 parcel => yarn parcel ./basic/maps/index.html
 import { User } from "./User";
 import { Company } from "./Company";
+import { CustomMap } from "./CustomMap";
 
 const user = new User();
 console.log("user", user);
 const company = new Company();
 console.log("company", company);
 
-console.log("google", google);
-
-new google.maps.Map(document.getElementById("map"), {
-  zoom: 1,
-  center: {
-    lat: 0,
-    lng: 0,
-  },
-});
+new CustomMap("map", 1, 0, 0);
