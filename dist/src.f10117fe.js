@@ -136948,6 +136948,14 @@ var user = new User_1.User();
 console.log("user", user);
 var company = new Company_1.Company();
 console.log("company", company);
+console.log("google", google);
+new google.maps.Map(document.getElementById("map"), {
+  zoom: 1,
+  center: {
+    lat: 0,
+    lng: 0
+  }
+});
 },{"./User":"src/User.ts","./Company":"src/Company.ts"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
