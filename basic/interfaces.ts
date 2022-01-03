@@ -33,6 +33,7 @@ interface Monster {
 let KingKong: Monster = {
   name: "King",
   food: "meet",
+  backup: "fierce",
 };
 
 // 唯獨屬性
