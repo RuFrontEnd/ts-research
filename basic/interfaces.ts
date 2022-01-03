@@ -30,6 +30,11 @@ interface Monster {
   [propName: string]: string;
 } // 任意屬性型別一定要是確定屬性型別的父級
 
+let KingKong: Monster = {
+  name: "King",
+  food: "meet",
+};
+
 // 唯獨屬性
 interface Creature {
   readonly id: number;
