@@ -15,9 +15,11 @@ interface TODO {
 // }
 
 export const fetchTodos = async () => {
-  const response = await axios.get<TODO[]>(url);
-  return {
-    type: ActionTypes.fetchTodos,
-    payload: response.data,
-  };
+//   return async (dispatch: Dispatch) => {
+//     const response = await axios.get<TODO[]>(url);
+//     return {
+//       type: ActionTypes.fetchTodos,
+//       payload: response.data,
+//     };
+//   };
 };
