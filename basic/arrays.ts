@@ -22,3 +22,7 @@ importantDates.push(new Date());
 // importantDates.push(100); //err
 
 // 泛型 Generic
+let fibonacci: Array<number> = [1, 1, 2, 3, 5];
+
+// any type array
+let list: any[] = ["anyString", 25, { website: "anotherString" }];

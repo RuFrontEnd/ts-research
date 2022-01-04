@@ -1,3 +1,22 @@
+// 函式宣告式 function declaration
+function sum(x: number, y: number): number {
+  return x + y;
+} // (x: number, y: number) => 定義輸入值型別 / : number 定義輸出值型別
+sum(1, 2);
+// sum(1, '2'); // err => y參數型別不正確
+
+// 函式表達式 function expression
+let getTotal = function (x: number, y: number): number {
+  return x + y;
+}; // 這樣的寫法會有個問題 => 只定義了右側匿名函式的型別 / 但左側變數型別是由型別推論出來的
+
+let getReviseTotal: (x: number, y: number) => number = function (
+  x: number,
+  y: number
+): number {
+  return x + y;
+}; // 改善寫法 => (x: number, y: number) => number 定義變數輸入輸出值
+
 const add = (a: number, b: number): number => {
   // return 'strstrstr'; // err
   return a + b;
@@ -54,3 +73,35 @@ const destructiveLogWeather = ({
 }; // 參數解構賦值
 
 destructiveLogWeather(todaysWeather);
+
+// 使用 interface 定義函式型別
+interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
+
+let mySearch: SearchFunc;
+mySearch = function (source: string, subString: string) {
+  return source.search(subString) !== -1;
+};
+
+// 可選參數
+function buildName(firstName: string, lastName?: string): string {
+  if (lastName) {
+    return firstName + " " + lastName;
+  } else {
+    return firstName;
+  }
+}
+let tomcat = buildName("Tom", "Cat");
+let tom = buildName("Tom");
+
+// 可選參數一定要在必選參數後面 => 可選參數後面不允許再出現必需參數
+// function errBuildName(lastName?: string, firstName: string): string {
+//   if (lastName) {
+//     return firstName + " " + lastName;
+//   } else {
+//     return firstName;
+//   }
+// } // err => 可選參數一定要在必選參數前面
+
+
