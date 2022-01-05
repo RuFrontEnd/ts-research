@@ -9,7 +9,7 @@ function getLength(something: string | number): number {
   } else {
     return something.toString().length;
   }
-} // 條件式中只有當 something 為 string 時才可以使用 .length 屬性, 但因為 something 也有可能是 number, 所以就要使用型別斷言的方式指定
+} // 條件式中只有當 something 為 string 時才可以使用 .length 屬性, 但因為 something 也有可能是 number, 所以就要使用型別斷言的方式更具體的說明該變數是什麼型別
 
 getLength(18);
 
