@@ -76,7 +76,7 @@ logNumber(1);
 // logNumber('test') // err
 
 // type annotations => 清楚定義變數型別
-// type inference (型別推論) => 讓 ts 判斷可能的型別( 無法判斷時為 any )
+// type inference (型別推論) => 讓 ts 判斷可能的型別( 無法判斷時為 any ), 避免不同型別的值被放入同一個變數
 // when to use annotations
 // 1) function that return the 'any' type
 const json = '{"x": 10, "y": 20}';
@@ -99,3 +99,9 @@ let numberAboveZero: boolean | number = false;
 numbers.map((number, index) => {
   number > 0 && (numberAboveZero = numbers[index]);
 });
+
+// nullable types => 在型別推論的時候直接設為any者
+let thereIsNothing = undefined;
+let thereIsNull = null;
+// thereIsNothing => 型別推論為any
+// thereIsNull => 型別推論為any
