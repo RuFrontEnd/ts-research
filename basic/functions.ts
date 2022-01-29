@@ -42,7 +42,7 @@ const logger = (message: string): void => {
   return null || undefined;
   //   return null || undefined || "123"; // err
   //   throw new Error(message); // worked
-}; // void 表示不回傳任何值 || 回傳 null || 回傳 undefined || 拋出錯誤
+}; // void 表示函式不回傳任何值 || 回傳 null || 回傳 undefined || 拋出錯誤
 
 const throwError = (message: string): never => {
   throw new Error(message);
