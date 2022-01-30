@@ -49,8 +49,6 @@ godOfWar = () => "godOfWar!"; // 函式也屬於 object type 的一種, 可覆�
 godOfWar = new String("godOfWar!"); // 物件實例也屬於 object type 的一種, 可覆寫
 // 結論: 陣列、函式、類別、類別實例皆屬於 object 型別
 
-
-
 const normalAge: number = profile.age; // 解構賦值寫法
 const { age, person }: { age: number; person: string } = profile; // 解構賦值寫法
 const {

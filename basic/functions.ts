@@ -1,3 +1,7 @@
+function getTotalString(num1: number, num2: number) {
+  return (num1 + num2).toString();
+} // 型別推論出 subtract 為 string
+
 // 函式宣告式 function declaration
 function sum(x: number, y: number): number {
   return x + y;
@@ -103,5 +107,3 @@ let tom = buildName("Tom");
 //     return firstName;
 //   }
 // } // err => 可選參數一定要在必選參數前面
-
-
