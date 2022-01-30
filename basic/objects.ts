@@ -42,7 +42,12 @@ let objWithNoValue = {
 let godOfWar: object = { name: "Kratos" };
 // godOfWar.name = "Tier"; // err type 為 object 的時候不支持物件 value 更新
 godOfWar = { name: "Tier" }; // 只支持整體物件覆寫
-// 結論: 型別為 object 時, 不可直接操作物件 value 的值, 只可整個 object 覆蓋
+// 結論: 型別為 object 時, 不可直接操作物件 value 的值, 只可完全覆寫整個 object
+// godOfWar = '123' // err 不可變為非物件
+godOfWar = [1, 2, 3]; // 陣列屬於 object type 的一種, 可覆寫
+godOfWar = () => "godOfWar!"; // 函式也屬於 object type 的一種, 可覆寫
+godOfWar = new String("godOfWar!"); // 物件實例也屬於 object type 的一種, 可覆寫
+// 結論: 陣列、函式、類別、類別實例皆屬於 object 型別
 
 
 
