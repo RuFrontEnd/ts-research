@@ -1,8 +1,9 @@
+// 型別別名 Type Alias
 export {}; // tsconfig.ts =>  "module": "commonjs",
 
 const today = new Date();
 today.getMonth();
-// today.abc; // 這邊會提示 abc 不包含在 Date 物件內
+// today.abc; // err 這邊會提示 abc 不包含在 Date 物件內
 
 const person = {
   age: 20,

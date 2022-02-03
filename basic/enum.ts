@@ -1,5 +1,5 @@
 // 列舉 Enum 型別用於取值被限定在一定範圍內的場景
-
+export {};
 enum Days {
   Sun,
   Mon,
@@ -19,6 +19,9 @@ console.log(Days[0] === "Sun"); // true
 console.log(Days[1] === "Mon"); // true
 console.log(Days[2] === "Tue"); // true
 console.log(Days[6] === "Sat"); // true
+
+let friday: Days = Days.Fri;
+console.log("friday", friday); // 5
 
 enum Season {
   Winter = 4,

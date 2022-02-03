@@ -1,5 +1,6 @@
 export {};
 // tuples 元組
+// 元祖和陣列的不同 => 元祖的有序的, 陣列是無序的 / 元祖的格式固定, 陣列的格式不固定
 
 const drink = {
   color: "brown",

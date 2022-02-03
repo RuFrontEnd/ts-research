@@ -1,6 +1,32 @@
-const carMarkers: string[] = ["ford", "toyota", "chevy"]; // 陣列內全部都是字串
+let carMarkers: string[] = ["ford", "toyota", "chevy"]; // 陣列內全部都是字串
+// carMarkers[1] = 100 // err
+// carMarkers.push(100) // err
 
 const carsByMake: string[][] = [["f150"], ["corolla"], ["camaro"]]; // 陣列內全部都是陣列且值皆為字串
+
+let objects = [
+  {
+    message: "Hello",
+  },
+  { message: "Hi" },
+  { message: "GoodBye" },
+];
+
+let objects2 = [
+  {
+    message: "Hello",
+  },
+  { message: "Hi", revolt: true },
+  { message: "GoodBye" },
+];
+
+let objects3 = [
+  {
+    message: "Hello",
+  },
+  { message: 100 },
+  { message: "GoodBye" },
+];
 
 // type array advantages
 // 1) Help with inference when extracting values

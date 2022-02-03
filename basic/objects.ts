@@ -9,6 +9,7 @@ let profile = {
     this.age = age;
   },
 };
+// 型別為明確格式的物件 => 稱為明文型別 (Object Literal Type)
 
 // profile.person = 100; // err 根據型別推論, person 應該為 string
 // profile = {
