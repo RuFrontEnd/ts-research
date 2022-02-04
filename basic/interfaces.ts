@@ -1,6 +1,42 @@
 interface Reportable {
   summary(): string;
 }
+// 結論: interface 基礎語法
+
+interface User {
+  name: string;
+}
+
+interface UserDetail extends User {
+  gender: "Male" | "Female" | "Other";
+  birth: Date;
+}
+
+const student: UserDetail = {
+  name: "ming",
+  gender: "Male",
+  birth: new Date(2000, 1, 30),
+};
+// 結論: interface 可繼承
+
+interface Repeatable {
+  key1: string;
+}
+
+interface Repeatable {
+  key2: string;
+}
+
+interface Repeatable {
+  key3: string;
+}
+
+const keys: Repeatable = {
+  key1: "value1",
+  key2: "value2",
+  key3: "value3",
+};
+// 結論: interface 可重複宣告 => 且結果為重複宣告之交集
 
 const oldCivic = {
   name: "civic",

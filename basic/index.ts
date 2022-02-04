@@ -35,4 +35,3 @@ const logTodo = (id: number, title: string, completed: boolean) => {
 // why do wo care about types?
 // 1. types are used by the Typescript Compiler to analyze our code for errors
 // 2. types allow other engineers to understand what values are flowing around out codebase
-
