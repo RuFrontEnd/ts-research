@@ -107,3 +107,8 @@ let tom = buildName("Tom");
 //     return firstName;
 //   }
 // } // err => 可選參數一定要在必選參數前面
+
+// function implicitAny(num1, num2) {
+//   return (num1 + num2).toString();
+// } // err
+// 結論: 在 tsconfig 中, 若 noImplicitAny 為 true, 會報錯
