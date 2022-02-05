@@ -8,6 +8,7 @@ function reverse(x: number | string): number | string {
   } else if (typeof x === "string") {
     return x.split("").reverse().join("");
   }
+  return "nothing";
 }
 
 interface Alarm {
