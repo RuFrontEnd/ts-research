@@ -1,3 +1,3 @@
 declare namespace DefinitionType {
-  const str: string;
+  type str = string;
 }
