@@ -27,6 +27,13 @@ function swap<T, U>(params: [T, U]): [U, T] {
 
 swap<number, string>([7, "seven"]); // ['seven', 7]
 
+// 泛型推論
+const getFirstItem = <T>(arr: T[]): T => {
+  return arr[0];
+};
+getFirstItem(["A", "B", "C"]); // T === string type
+getFirstItem([1, 2, 3]); // T === number type
+
 // 泛型約束
 interface Lengthwise {
   length: number;
@@ -39,3 +46,15 @@ function loggingIdentity<T extends Lengthwise>(arg: T): T {
 
 loggingIdentity({ name: "Jack", length: 4 });
 // loggingIdentity({ name: "Jack" }); // 少了 length 屬性
+
+
+
+function longest<Type extends { length: number }>(a: Type, b: Type) {
+  if (a.length >= b.length) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+const longerArray = longest([1, 2], [1, 2, 3]);
