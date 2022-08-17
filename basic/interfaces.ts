@@ -47,17 +47,17 @@ const oldCivic = {
   },
 };
 
-// 任意屬性
+// 任意屬性 index signature
 interface AirPlane {
   name: string;
   speed: number;
   [propName: string]: any;
 }
 
-const helicopter = {
+const helicopter: AirPlane = {
   name: "eagle-008",
   speed: 300,
-  backup: "new one",
+  0: "new one",
 };
 
 interface Monster {
@@ -104,3 +104,27 @@ const printSummary = (item: Reportable): void => {
 
 printSummary(oldCivic);
 printSummary(drink);
+
+// 繼承 extends
+interface Colorful {
+  color: string;
+}
+
+interface Circle {
+  radius: number;
+}
+
+// 寫法 1
+interface ColorfulCircle extends Colorful, Circle {}
+// 寫法2
+type ColorfulCircleType = Colorful & Circle;
+
+const colorfulCircle: ColorfulCircle = {
+  color: "red",
+  radius: 10,
+};
+
+const colorfulCircle_second: ColorfulCircleType = {
+  color: "red",
+  radius: 10,
+};
